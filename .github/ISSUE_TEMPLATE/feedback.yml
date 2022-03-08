@@ -49,4 +49,5 @@ body:
 - type: textarea
   id: written_feedback
   attributes:
-    label: Do you have any additional feedback you would like to give? Leave this blank if this is not the case.
+    label: Do you have any additional feedback you would like to give? 
+    placeholder: Leave this blank if this is not the case.
