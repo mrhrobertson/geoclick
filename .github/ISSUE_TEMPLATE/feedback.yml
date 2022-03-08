@@ -15,8 +15,8 @@ body:
       - Needs improvement
       - Unusable
       - Unenjoyable
-    validations:
-      required: true
+  validations:
+    required: true
 - type: dropdown
   id: design
   attributes:
@@ -27,8 +27,8 @@ body:
       - Needs improvement
       - Unusable
       - Unenjoyable
-    validations:
-      required: true
+  validations:
+    required: true
 - type: dropdown
   id: recommend
   attributes:
@@ -44,8 +44,8 @@ body:
       - 3
       - 2
       - 1 (Would not recommend)
-    validations:
-      required: true
+  validations:
+    required: true
 - type: textarea
   id: written_feedback
   attributes:
