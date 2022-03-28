@@ -1,34 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GeoQuiz</title>
     <link href="./css/main.css" rel="stylesheet" type="text/css" />
     <link href="./css/utils.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        GeoQuiz
-        <nav>
-            <a class="button active">Quiz</a>
-            <a class="button" href="./about.html">About</a>
-            <a class="button vcenter" href="https://github.com/mrhrobertson/geoquiz/issues/new?assignees=mrhrobertson&labels=feedback&template=feedback.yml&title=%5BFEEDBACK%5D+" target="_blank">Feedback <i class="inline-left material-icons">note_add</i></a>
-        </nav>
+      GeoQuiz
+      <nav>
+        <a class="button active desktop" href="./index.html">Quiz</a>
+        <a class="button desktop" href="./about.html">About</a>
+        <a
+          class="button vcenter desktop"
+          href="https://github.com/mrhrobertson/geoquiz/issues/new?assignees=mrhrobertson&labels=feedback&template=feedback.yml&title=%5BFEEDBACK%5D+"
+          target="_blank"
+        >
+          Feedback <i class="inline-left material-icons">note_add</i>
+        </a>
+        <div>
+          <a id="mobile-menu" class="button vcenter mobile">
+            Menu <i class="inline-left material-icons">menu</i>
+          </a>
+          <div id="mobile-drop" class="hidden">
+            <a class="button active mobile" href="./index.html">Quiz</a>
+            <a class="button mobile" href="./about.html">About</a>
+            <a
+              class="button vcenter mobile"
+              href="https://github.com/mrhrobertson/geoquiz/issues/new?assignees=mrhrobertson&labels=feedback&template=feedback.yml&title=%5BFEEDBACK%5D+"
+              target="_blank"
+            >
+              Feedback <i class="inline-left material-icons">note_add</i>
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <div id="play">
-            <h1>Are you ready to play?</h1>
-            <p>Try your hand at flexing your geography knowledge!</p>
-            <a onclick="" class="button">Let's go!</a>
-        </div>
+      <div id="play">
+        <h1>Are you ready to play?</h1>
+        <p>Try your hand at flexing your geography knowledge!</p>
+        <a onclick="start_quiz()" class="button">Let's go!</a>
+      </div>
+      <div id="quiz" class="hidden">
+        <h1>Question <span>0</span></h1>
+        <p>Is this really a filler question?</p>
+        <p id="counter">Score: <span id="score">0</span></p>
+      </div>
     </main>
     <footer class="vcenter">
-        <p class="vcenter">Made with <i class="inline material-icons">favorite_border</i> and <i class="inline material-icons">coffee</i> by Mark Robertson</p>
-        <hr class="separator">
-        <a class="button vcenter" href="https://github.com/mrhrobertson/geoquiz" target="_blank">Source code on GitHub<i class="inline-left material-icons">note_add</i></a>
+      <p class="vcenter">
+        Made with <i class="inline material-icons">favorite_border</i> and
+        <i class="inline material-icons">coffee</i> by Mark Robertson
+      </p>
+      <hr class="separator" />
+      <a
+        class="button vcenter"
+        href="https://github.com/mrhrobertson/geoquiz"
+        target="_blank"
+        >Source code on GitHub<i class="inline-left material-icons"
+          >note_add</i
+        ></a
+      >
     </footer>
-</body>
+    <script src="./js/quiz.js"></script>
+  </body>
 </html>

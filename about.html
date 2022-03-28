@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GeoQuiz | About</title>
     <link href="./css/main.css" rel="stylesheet" type="text/css" />
     <link href="./css/utils.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        GeoQuiz
-        <nav>
-            <a class="button" href="./index.html">Quiz</a>
-            <a class="button active" href="./about.html">About</a>
-            <a class="button vcenter" href="https://github.com/mrhrobertson/geoquiz/issues/new?assignees=mrhrobertson&labels=feedback&template=feedback.yml&title=%5BFEEDBACK%5D+" target="_blank">Feedback <i class="inline-left material-icons">note_add</i></a>
-        </nav>
+      GeoQuiz
+      <nav>
+        <a class="button desktop" href="./index.html">Quiz</a>
+        <a class="button active desktop" href="./about.html">About</a>
+        <a
+          class="button vcenter desktop"
+          href="https://github.com/mrhrobertson/geoquiz/issues/new?assignees=mrhrobertson&labels=feedback&template=feedback.yml&title=%5BFEEDBACK%5D+"
+          target="_blank"
+        >
+          Feedback <i class="inline-left material-icons">note_add</i>
+        </a>
+        <div>
+          <a id="mobile-menu" class="button vcenter mobile">
+            Menu <i class="inline-left material-icons">menu</i>
+          </a>
+          <div id="mobile-drop" class="hidden">
+            <a class="button mobile" href="./index.html">Quiz</a>
+            <a class="button active mobile" href="./about.html">About</a>
+            <a
+              class="button vcenter mobile"
+              href="https://github.com/mrhrobertson/geoquiz/issues/new?assignees=mrhrobertson&labels=feedback&template=feedback.yml&title=%5BFEEDBACK%5D+"
+              target="_blank"
+            >
+              Feedback <i class="inline-left material-icons">note_add</i>
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <div id="about">
-            <h1>What is this all about?</h1>
-            <p>This website is made for the second part of my Web Technologies module. The task is to create an online quiz. My choice is to create a geography-based quiz with an interactive map.</p>
-        </div>
+      <div id="about">
+        <h1>What is this all about?</h1>
+        <p>
+          I will be developing a website with a interactive world map and a
+          dynamic form to create an online quiz, that will serve questions that
+          either require interaction with the world map through a text or
+          image-based question, a multiple choice selection, or a text-input
+          answer with some lexical leniency.
+        </p>
+        <p>
+          This is not a unique concept, as outlined in my research, however many
+          of the current implementations rely on emulations, such as Java
+          Runtime Environment (JRE) and Flash Shockwave Player, or non-standard
+          libraries to create this functionality. My aim is to create a
+          platform-agnostic version of these quizzes that can handle both
+          desktop and mobile use whilst using HTML5, CSS3 and vanilla
+          JavaScript.
+        </p>
+      </div>
     </main>
     <footer class="vcenter">
-        <p class="vcenter">Made with <i class="inline material-icons">favorite_border</i> and <i class="inline material-icons">coffee</i> by Mark Robertson</p>
-        <hr class="separator">
-        <a class="button vcenter" href="https://github.com/mrhrobertson/geoquiz" target="_blank">Source code on GitHub<i class="inline-left material-icons">note_add</i></a>
+      <p class="vcenter">
+        Made with <i class="inline material-icons">favorite_border</i> and
+        <i class="inline material-icons">coffee</i> by Mark Robertson
+      </p>
+      <hr class="separator" />
+      <a
+        class="button vcenter"
+        href="https://github.com/mrhrobertson/geoquiz"
+        target="_blank"
+        >Source code on GitHub<i class="inline-left material-icons"
+          >note_add</i
+        ></a
+      >
     </footer>
-</body>
+    <script src="./js/navbar.js"></script>
+  </body>
 </html>

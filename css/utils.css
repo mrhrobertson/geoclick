@@ -1,20 +1,36 @@
 .vcenter {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 }
 
-.inline {    
-    padding: 0rem 0.5rem;
+.inline {
+  padding: 0rem 0.5rem;
 }
 
 .inline-left {
-    padding: 0rem;
-    padding-left: 0.5rem;
+  padding: 0rem;
+  padding-left: 0.5rem;
 }
 
 .separator {
-    color: white;
-    margin-left: 1rem;
-    margin-right: 0.25rem;
-    height: 2rem;
+  color: white;
+  margin-left: 1rem;
+  margin-right: 0.25rem;
+  height: 2rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media only screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
 }
