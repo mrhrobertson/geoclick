@@ -92,6 +92,7 @@ main {
   color: var(--secondary);
   border-radius: 0.5rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button:hover,

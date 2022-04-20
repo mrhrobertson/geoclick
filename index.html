@@ -50,8 +50,19 @@
         <a onclick="start_quiz()" class="button">Let's go!</a>
       </div>
       <div id="quiz" class="hidden">
-        <h1>Question <span>0</span></h1>
-        <p>Is this really a filler question?</p>
+        <h1>Question <span id="q_id">0</span></h1>
+        <p id="q_content">Is this really a filler question?</p>
+        <div id="map" class="vcenter">
+          <a onclick="answer_question('Europe')" class="button">Europe</a>
+          <a onclick="answer_question('Asia')" class="button">Asia</a>
+          <a onclick="answer_question('NA')" class="button">North America</a>
+          <a onclick="answer_question('SA')" class="button">South America</a>
+          <a onclick="answer_question('Africa')" class="button">Africa</a>
+          <a onclick="answer_question('Oceania')" class="button">Oceania</a>
+          <a onclick="answer_question('Antarctica')" class="button"
+            >Antarctica</a
+          >
+        </div>
         <p id="counter">Score: <span id="score">0</span></p>
       </div>
     </main>
