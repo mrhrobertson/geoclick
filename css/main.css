@@ -5,6 +5,10 @@
   --primary: #012a36;
   --secondary: #a5d8ff;
   --tertiary: #19384f;
+  --success-primary: #0cf574;
+  --success-secondary: #29754b;
+  --failure-primary: #d16b75;
+  --failure-secondary: #841c26;
 }
 
 html {
@@ -60,7 +64,7 @@ main {
 }
 
 #counter {
-  font-family: "Source Code Pro";
+  font-family: "Source Code Pro", monospace;
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: var(--primary);
@@ -85,6 +89,42 @@ main {
   margin-top: 0.5rem;
 }
 
+.correct {
+  background-color: var(--success-primary);
+  color: var(--success-secondary) !important;
+  border: 0.125rem solid var(--success-secondary) !important;
+}
+
+.correct i::after {
+  font-size: 1.25rem;
+  content: "check_circle";
+  float: right;
+}
+
+.correct:hover {
+  background-color: var(--success-primary) !important;
+  color: var(--success-secondary) !important;
+  cursor: default;
+}
+
+.wrong {
+  background-color: var(--failure-primary);
+  color: var(--failure-secondary) !important;
+  border: 0.125rem solid var(--failure-secondary) !important;
+}
+
+.wrong i::after {
+  font-size: 1.25rem;
+  content: "cancel";
+  float: right;
+}
+
+.wrong:hover {
+  background-color: var(--failure-primary) !important;
+  color: var(--failure-secondary) !important;
+  cursor: default;
+}
+
 .button {
   margin: 1rem;
   padding: 0.75rem 1.5rem;
@@ -93,6 +133,9 @@ main {
   border-radius: 0.5rem;
   text-decoration: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button:hover,
@@ -104,4 +147,13 @@ main {
 .mobile-drop {
   position: relative;
   top: 100%;
+}
+
+#mobile-answers {
+  display: flex;
+  flex-direction: column;
+}
+
+#mobile-answers a {
+  width: 100%;
 }

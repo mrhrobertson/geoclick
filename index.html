@@ -52,17 +52,32 @@
       <div id="quiz" class="hidden">
         <h1>Question <span id="q_id">0</span></h1>
         <p id="q_content">Is this really a filler question?</p>
-        <div id="map" class="vcenter">
-          <a onclick="answer_question('Europe')" class="button">Europe</a>
-          <a onclick="answer_question('Asia')" class="button">Asia</a>
-          <a onclick="answer_question('NA')" class="button">North America</a>
-          <a onclick="answer_question('SA')" class="button">South America</a>
-          <a onclick="answer_question('Africa')" class="button">Africa</a>
-          <a onclick="answer_question('Oceania')" class="button">Oceania</a>
-          <a onclick="answer_question('Antarctica')" class="button"
-            >Antarctica</a
-          >
+        <div id="mobile-answers" class="vcenter">
+          <a onclick="answer_question('Europe', event)" class="button"
+            >Europe<i class="inline-left material-icons"></i
+          ></a>
+          <a onclick="answer_question('Asia', event)" class="button"
+            >Asia<i class="inline-left hidden material-icons"></i
+          ></a>
+          <a onclick="answer_question('NA', event)" class="button"
+            >North America<i class="inline-left hidden material-icons"></i
+          ></a>
+          <a onclick="answer_question('SA', event)" class="button"
+            >South America<i class="inline-left hidden material-icons"></i
+          ></a>
+          <a onclick="answer_question('Africa', event)" class="button"
+            >Africa<i class="inline-left material-icons"></i
+          ></a>
+          <a onclick="answer_question('Oceania', event)" class="button"
+            >Oceania<i class="inline-left material-icons"></i
+          ></a>
+          <a
+            onclick="answer_question('Antarctica', event)"
+            class="button antarctica"
+            >Antarctica<i class="inline-left material-icons"></i
+          ></a>
         </div>
+        <a onclick="load_question()" class="button" id="next">Next Question</a>
         <p id="counter">Score: <span id="score">0</span></p>
       </div>
     </main>
