@@ -3,7 +3,8 @@ const play = document.getElementById("play");
 const quiz = document.getElementById("quiz");
 const next = document.getElementById("next");
 const counter = document.getElementById("score");
-const question_loc = "/assets/questions.json";
+const question_loc =
+  "https://mrhrobertson.github.io/geoquiz/assets/questions.json";
 
 // initialise score & question number from storage
 let score =
