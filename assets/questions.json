@@ -9,76 +9,56 @@
       "correct": "Europe"
     },
     {
-      "question": "Which continent has the largest population of elephants?",
+      "question": "Which continent covers a third of the world's surface?",
+      "correct": "Asia"
+    },
+    {
+      "question": "Which continent is the home of Elf, the world's smallest owl?",
+      "correct": "NA"
+    },
+    {
+      "question": "The smallest country in the world is in which continent?",
+      "correct": "Europe"
+    },
+    {
+      "question": "Which continent holds the largest country AND the most populated country?",
+      "correct": "Asia"
+    },
+    {
+      "question": "Where would find the third longest river in the world, the Mississippi?",
+      "correct": "NA"
+    },
+    {
+      "question": "Which continent houses the world's largest coffee producing country?",
+      "correct": "SA"
+    },
+    {
+      "question": "Which continent is home to the Great Barrier Reef?",
+      "correct": "Oceania"
+    },
+    {
+      "question": "Which continent is the smallest by landmass?",
+      "correct": "Oceania"
+    },
+    {
+      "question": "Salar de Uyuni, the world's largest saltwater lake can be found in which continent?",
+      "correct": "SA"
+    },
+    {
+      "question": "Which continent is the source of 75% of the world's potatoes?",
+      "correct": "Europe"
+    },
+    {
+      "question": "66% of all the world's chocolate comes from which continent?",
       "correct": "Africa"
     },
     {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
+      "question": "Which continent is the largest by landmass and population?",
+      "correct": "Asia"
     },
     {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
-    },
-    {
-      "question": "Which continent has the largest population of elephants?",
-      "correct": "Africa"
+      "question": "Which continent has the smallest population of just 1,106 residents?",
+      "correct": "Antarctica"
     }
   ]
 }

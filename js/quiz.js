@@ -103,8 +103,19 @@ async function answer_question(answer, e) {
     }
     if (next.classList.contains("hidden")) {
       next.classList.remove("hidden");
-      next.innerText = "Next Question";
-      next.onclick = () => load_question();
+      console.log(
+        questions["questions"].length,
+        window.localStorage.getItem("score")
+      );
+      if (
+        window.localStorage.getItem("score") >= questions["questions"].length
+      ) {
+        next.innerText = "You win! Finish Quiz";
+        next.onclick = () => end_quiz();
+      } else {
+        next.innerText = "Next Question";
+        next.onclick = () => load_question();
+      }
     }
   } else {
     e.target.classList.add("wrong");
