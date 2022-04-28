@@ -98,6 +98,8 @@ main {
   color: var(--success-secondary) !important;
   border: 0.125rem solid var(--success-secondary) !important;
   opacity: 100% !important;
+  fill: var(--success-primary) !important;
+  stroke: var(--success-secondary) !important;
 }
 
 .correct i::after {
@@ -118,6 +120,8 @@ main {
   color: var(--failure-secondary) !important;
   border: 0.125rem solid var(--failure-secondary) !important;
   opacity: 100% !important;
+  fill: var(--failure-primary) !important;
+  stroke: var(--failure-secondary) !important;
 }
 
 .wrong i::after {
@@ -131,16 +135,20 @@ main {
   color: var(--failure-secondary) !important;
   cursor: default;
   opacity: 100% !important;
+  fill: var(--failure-primary) !important;
+  stroke: var(--failure-secondary) !important;
 }
 
 .disabled {
   opacity: 20%;
   cursor: not-allowed;
+  stroke-opacity: 80% !important;
 }
 
 .disabled:hover {
   cursor: not-allowed;
   opacity: 20%;
+  stroke-opacity: 80% !important;
 }
 
 .button {
@@ -157,7 +165,7 @@ main {
 }
 
 .button:hover,
-.button.active {
+.button:active {
   background-color: var(--secondary);
   color: var(--primary);
 }
@@ -168,7 +176,7 @@ main {
 }
 
 #answers {
-  display: flex;
+  display: none;
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
@@ -177,6 +185,20 @@ main {
 
 #answers a {
   width: 100%;
+}
+
+#map {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linejoin: round;
+  stroke-miterlimit: 2;
+  stroke: var(--secondary);
+  stroke-width: 0.125rem;
+}
+
+.continent {
+  fill: var(--tertiary);
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -200,5 +222,13 @@ main {
 
   .separator {
     display: none;
+  }
+
+  #map {
+    display: none;
+  }
+
+  #answers {
+    display: flex;
   }
 }

@@ -1,6 +1,7 @@
 // constants
 const play = document.getElementById("play");
 const quiz = document.getElementById("quiz");
+const map = document.getElementById("map");
 const next = document.getElementById("next");
 const counter = document.getElementById("score");
 const question_loc =
@@ -50,19 +51,32 @@ async function load_question() {
   let questions = await fetch(question_loc).then((res) => res.json());
   let loaded = await questions["questions"][question];
   let content = loaded.question;
+  let mobile = window.visualViewport.width <= 768 ? true : false;
+  console.log(mobile);
   next.classList.add("hidden");
-  let answers = quiz.children[2].children;
+  let answers = mobile ? quiz.children[2].children : map.children;
   for (let i = 0; i < answers.length; i++) {
-    if (answers[i].classList.contains("correct")) {
-      answers[i].classList.remove("correct");
-      answers[i].children[0].classList.add("hidden");
+    if (mobile) {
+      if (answers[i].classList.contains("correct")) {
+        answers[i].classList.remove("correct");
+        answers[i].children[0].classList.add("hidden");
+      }
+      if (answers[i].classList.contains("wrong")) {
+        answers[i].classList.remove("wrong");
+        answers[i].children[0].classList.add("hidden");
+      }
+      if (answers[i].classList.contains("disabled"))
+        answers[i].classList.remove("disabled");
+    } else {
+      if (answers[i].children[0].classList.contains("correct")) {
+        answers[i].children[0].classList.remove("correct");
+      }
+      if (answers[i].children[0].classList.contains("wrong")) {
+        answers[i].children[0].classList.remove("wrong");
+      }
+      if (answers[i].children[0].classList.contains("disabled"))
+        answers[i].children[0].classList.remove("disabled");
     }
-    if (answers[i].classList.contains("wrong")) {
-      answers[i].classList.remove("wrong");
-      answers[i].children[0].classList.add("hidden");
-    }
-    if (answers[i].classList.contains("disabled"))
-      answers[i].classList.remove("disabled");
   }
   document.getElementById("q_id").innerText = parseInt(question) + 1;
   document.getElementById("q_content").innerHTML = content;
@@ -71,17 +85,21 @@ async function load_question() {
 async function answer_question(answer, e) {
   if (e.target.classList.contains("disabled")) return;
   let questions = await fetch(question_loc).then((res) => res.json());
+  let map_input = e.target.classList.contains("continent") ? true : false;
   let loaded = await questions["questions"][question];
+  let answers = map_input ? map.children : quiz.children[2].children;
   if (answer == loaded.correct) {
     e.target.classList.add("correct");
-    e.target.children[0].classList.remove("hidden");
+    if (!map_input) e.target.children[0].classList.remove("hidden");
     console.log("Correct! :D");
     add_score(1);
     question++;
     window.localStorage.setItem("question", question);
-    let answers = quiz.children[2].children;
     for (let i = 0; i < answers.length; i++) {
-      answers[i].classList.add("disabled");
+      if (map_input) {
+        answers[i].children[0].classList.add("disabled");
+        quiz.children[2].children[i].classList.add("disabled");
+      } else answers[i].classList.add("disabled");
     }
     if (next.classList.contains("hidden")) {
       next.classList.remove("hidden");
@@ -90,10 +108,12 @@ async function answer_question(answer, e) {
     }
   } else {
     e.target.classList.add("wrong");
-    e.target.children[0].classList.remove("hidden");
-    let answers = quiz.children[2].children;
+    if (!map_input) e.target.children[0].classList.remove("hidden");
     for (let i = 0; i < answers.length; i++) {
-      answers[i].classList.add("disabled");
+      if (map_input) {
+        answers[i].children[0].classList.add("disabled");
+        quiz.children[2].children[i].classList.add("disabled");
+      } else answers[i].classList.add("disabled");
     }
     if (next.classList.contains("hidden")) {
       next.classList.remove("hidden");
