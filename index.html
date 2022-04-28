@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <title>GeoQuiz</title>
     <link href="./css/main.css" rel="stylesheet" type="text/css" />
     <link href="./css/utils.css" rel="stylesheet" type="text/css" />
@@ -52,9 +53,9 @@
       <div id="quiz" class="hidden">
         <h1>Question <span id="q_id">0</span></h1>
         <p id="q_content">Is this really a filler question?</p>
-        <div id="mobile-answers" class="vcenter">
+        <div id="answers" class="vcenter">
           <a onclick="answer_question('Europe', event)" class="button"
-            >Europe<i class="inline-left material-icons"></i
+            >Europe<i class="inline-left hidden material-icons"></i
           ></a>
           <a onclick="answer_question('Asia', event)" class="button"
             >Asia<i class="inline-left hidden material-icons"></i
@@ -66,15 +67,13 @@
             >South America<i class="inline-left hidden material-icons"></i
           ></a>
           <a onclick="answer_question('Africa', event)" class="button"
-            >Africa<i class="inline-left material-icons"></i
+            >Africa<i class="inline-left hidden material-icons"></i
           ></a>
           <a onclick="answer_question('Oceania', event)" class="button"
-            >Oceania<i class="inline-left material-icons"></i
+            >Oceania<i class="inline-left hidden material-icons"></i
           ></a>
-          <a
-            onclick="answer_question('Antarctica', event)"
-            class="button antarctica"
-            >Antarctica<i class="inline-left material-icons"></i
+          <a onclick="answer_question('Antarctica', event)" class="button"
+            >Antarctica<i class="inline-left hidden material-icons"></i
           ></a>
         </div>
         <a onclick="load_question()" class="button" id="next">Next Question</a>

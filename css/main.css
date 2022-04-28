@@ -51,6 +51,10 @@ main {
   padding: 1rem;
 }
 
+#play {
+  width: 50% !important;
+}
+
 #play,
 #quiz {
   display: flex;
@@ -60,7 +64,7 @@ main {
   background-color: var(--tertiary);
   padding: 2.5rem;
   border-radius: 1rem;
-  width: 50%;
+  width: 80%;
 }
 
 #counter {
@@ -93,6 +97,7 @@ main {
   background-color: var(--success-primary);
   color: var(--success-secondary) !important;
   border: 0.125rem solid var(--success-secondary) !important;
+  opacity: 100% !important;
 }
 
 .correct i::after {
@@ -105,12 +110,14 @@ main {
   background-color: var(--success-primary) !important;
   color: var(--success-secondary) !important;
   cursor: default;
+  opacity: 100% !important;
 }
 
 .wrong {
   background-color: var(--failure-primary);
   color: var(--failure-secondary) !important;
   border: 0.125rem solid var(--failure-secondary) !important;
+  opacity: 100% !important;
 }
 
 .wrong i::after {
@@ -123,6 +130,17 @@ main {
   background-color: var(--failure-primary) !important;
   color: var(--failure-secondary) !important;
   cursor: default;
+  opacity: 100% !important;
+}
+
+.disabled {
+  opacity: 20%;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  cursor: not-allowed;
+  opacity: 20%;
 }
 
 .button {
@@ -149,11 +167,38 @@ main {
   top: 100%;
 }
 
-#mobile-answers {
+#answers {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
-#mobile-answers a {
+#answers a {
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    overflow: scroll;
+  }
+
+  #play,
+  #quiz {
+    width: 75% !important;
+  }
+
+  #main {
+    padding: 0;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .separator {
+    display: none;
+  }
 }
