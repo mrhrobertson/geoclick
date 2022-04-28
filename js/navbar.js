@@ -1,7 +1,8 @@
-let menu = document.getElementById("mobile-menu");
-let drop = document.getElementById("mobile-drop");
+const menu = document.getElementById("mobile-menu");
+const drop = document.getElementById("mobile-drop");
 
-menu.onclick = () => {
+function open_mobile_menu() {
+  console.log("Open menu");
   if (!menu.classList.contains("active")) {
     menu.classList.add("active");
   } else {
@@ -13,4 +14,4 @@ menu.onclick = () => {
   } else {
     drop.classList.remove("hidden");
   }
-};
+}

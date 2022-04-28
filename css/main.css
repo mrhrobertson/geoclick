@@ -165,14 +165,21 @@ main {
 }
 
 .button:hover,
-.button:active {
+.button.active {
   background-color: var(--secondary);
   color: var(--primary);
 }
 
-.mobile-drop {
+#mobile-menu {
+  float: right;
+}
+
+#mobile-drop {
+  display: inline-flex;
+  flex-direction: column;
   position: relative;
   top: 100%;
+  float: right;
 }
 
 #answers {
@@ -204,7 +211,8 @@ main {
 @media only screen and (max-width: 768px) {
   html,
   body {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   #play,

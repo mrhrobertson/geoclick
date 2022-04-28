@@ -26,8 +26,12 @@
         >
           Feedback <i class="inline-left material-icons">note_add</i>
         </a>
-        <div>
-          <a id="mobile-menu" class="button vcenter mobile">
+        <div id="mobile-wrap">
+          <a
+            onclick="open_mobile_menu()"
+            id="mobile-menu"
+            class="button vcenter mobile"
+          >
             Menu <i class="inline-left material-icons">menu</i>
           </a>
           <div id="mobile-drop" class="hidden">
@@ -163,6 +167,7 @@
         ></a
       >
     </footer>
+    <script src="./js/navbar.js"></script>
     <script src="./js/quiz.js"></script>
   </body>
 </html>
